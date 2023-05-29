@@ -14,6 +14,10 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
   pokemon.type = type;
 
   pokemon.photo = pokeDetail.sprites.other["official-artwork"].front_default;
+  pokemon.height = pokeDetail.height;
+  pokemon.weight = pokeDetail.weight;
+
+  pokeDetail.stats.forEach((item) => (pokemon.stats[item.stat.name] = item.base_stat));
 
   return pokemon;
 }
