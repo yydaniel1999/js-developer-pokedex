@@ -15,6 +15,7 @@ body {
   height: 100vh;
   padding: 1rem;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 992px) {
